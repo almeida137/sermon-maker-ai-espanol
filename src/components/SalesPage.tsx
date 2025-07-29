@@ -22,10 +22,6 @@ import productDemo from "@/assets/product-demo.jpg";
 import pastorTestimonial1 from "@/assets/pastor-testimonial-1.jpg";
 import pastorTestimonial2 from "@/assets/pastor-testimonial-2.jpg";
 import pastorTestimonial3 from "@/assets/pastor-testimonial-3.jpg";
-import bonusBosquejos from "@/assets/bonus-bosquejos.jpg";
-import bonusMemorizacion from "@/assets/bonus-memorizacion.jpg";
-import bonusConsejos from "@/assets/bonus-consejos.jpg";
-import bonusPractica from "@/assets/bonus-practica.jpg";
 
 const SalesPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -87,35 +83,27 @@ const SalesPage = () => {
   const bonuses = [
     {
       icon: "📘",
-      image: bonusBosquejos,
       title: "+100 Bosquejos Listos para Predicar",
       description: "Una biblioteca completa de bosquejos sobre temas variados",
-      originalValue: "$97",
-      currentValue: "¡Gratis!"
+      value: "$97"
     },
     {
       icon: "📕",
-      image: bonusMemorizacion,
       title: "Guía Completa para Memorizar Sermones",
       description: "Técnicas probadas para memorizar sermones y versículos bíblicos",
-      originalValue: "$47",
-      currentValue: "¡Gratis!"
+      value: "$47"
     },
     {
       icon: "📗",
-      image: bonusConsejos,
       title: "Consejos Valiosos para Mejorar tu Predicación",
       description: "Estrategias de comunicación efectiva desde el púlpito",
-      originalValue: "$37",
-      currentValue: "¡Gratis!"
+      value: "$37"
     },
     {
       icon: "📙",
-      image: bonusPractica,
       title: "Guía Práctica para Predicar sobre Cualquier Tema",
       description: "Metodología paso a paso para abordar cualquier pasaje bíblico",
-      originalValue: "$57",
-      currentValue: "¡Gratis!"
+      value: "$57"
     }
   ];
 
@@ -154,56 +142,56 @@ const SalesPage = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
-            <span className="text-lg sm:text-2xl font-bold text-foreground">Sermón Maker</span>
+            <BookOpen className="h-8 w-8 text-primary" />
+            <span className="text-2xl font-bold text-foreground">Sermón Maker</span>
           </div>
-          <Button variant="spiritual" size="sm" className="sm:text-base" onClick={scrollToPricing}>
+          <Button variant="spiritual" size="lg" onClick={scrollToPricing}>
             Acceder Ahora
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-peaceful">
-        <div className="container mx-auto px-3 sm:px-4 text-center">
-          <Badge variant="secondary" className="mb-4 sm:mb-6 text-sm sm:text-lg px-4 sm:px-6 py-1 sm:py-2">
+      <section className="relative py-20 bg-gradient-peaceful">
+        <div className="container mx-auto px-4 text-center">
+          <Badge variant="secondary" className="mb-6 text-lg px-6 py-2">
             🚀 Oferta Especial por Tiempo Limitado
           </Badge>
           
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
             Crea Sermones 
             <span className="bg-gradient-spiritual bg-clip-text text-transparent"> Poderosos</span>
             <br />en Solo Minutos
           </h1>
           
-          <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Transforma tu preparación de sermones con IA especializada. 
             De horas frustrantes a minutos de claridad. 
             <strong className="text-spiritual-blue">Estructura perfecta, mensaje impactante.</strong>
           </p>
 
-          <div className="flex flex-col gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-            <Button variant="spiritual" size="lg" className="w-full sm:w-auto text-base sm:text-lg" onClick={scrollToPricing}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button variant="spiritual" size="xl" onClick={scrollToPricing}>
               Empieza a Predicar con Poder Hoy
             </Button>
-            <Button variant="peaceful" size="lg" className="w-full sm:w-auto text-base sm:text-lg">
+            <Button variant="peaceful" size="xl">
               Ver Demostración <ChevronDown className="ml-2" />
             </Button>
           </div>
 
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-sm sm:text-base text-muted-foreground px-4">
-            <div className="flex items-center justify-center gap-2">
-              <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-spiritual-blue flex-shrink-0" />
+          <div className="flex flex-wrap justify-center gap-8 text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-spiritual-blue" />
               <span>Sin conocimientos técnicos</span>
             </div>
-            <div className="flex items-center justify-center gap-2">
-              <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-spiritual-blue flex-shrink-0" />
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-spiritual-blue" />
               <span>Garantía de 30 días</span>
             </div>
-            <div className="flex items-center justify-center gap-2">
-              <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-spiritual-blue flex-shrink-0" />
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-spiritual-blue" />
               <span>+$238 en bonos gratis</span>
             </div>
           </div>
@@ -211,28 +199,28 @@ const SalesPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-background">
-        <div className="container mx-auto px-3 sm:px-4">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-2">
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               ¿Por Qué Sermón Maker Está Transformando 
               <span className="text-spiritual-blue"> la Predicación?</span>
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Desarrollado por expertos en predicación y tecnología, 
               Sermón Maker elimina las horas de frustración y te da estructura profesional al instante.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-peaceful transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
-                <CardContent className="p-6 sm:p-8 text-center">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-soft-blue rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                    <benefit.icon className="h-6 w-6 sm:h-8 sm:w-8 text-spiritual-blue" />
+              <Card key={index} className="border-0 shadow-soft hover:shadow-peaceful transition-all duration-300 hover:-translate-y-2">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-soft-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="h-8 w-8 text-spiritual-blue" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">{benefit.title}</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -342,29 +330,20 @@ const SalesPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {bonuses.map((bonus, index) => (
-              <Card key={index} className="border-2 border-gold/20 shadow-divine overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="flex flex-col sm:flex-row">
-                    <div className="w-full sm:w-32 h-32 sm:h-full">
-                      <img 
-                        src={bonus.image} 
-                        alt={bonus.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-4 sm:p-6 flex-1">
-                      <div className="flex flex-col sm:flex-row justify-between items-start mb-3">
-                        <h3 className="font-semibold text-foreground text-base sm:text-lg mb-2 sm:mb-0 pr-2">{bonus.title}</h3>
-                        <div className="flex flex-col items-start sm:items-end">
-                          <span className="text-sm text-muted-foreground line-through">De {bonus.originalValue}</span>
-                          <Badge variant="outline" className="text-spiritual-blue border-spiritual-blue text-sm">
-                            {bonus.currentValue}
-                          </Badge>
-                        </div>
+              <Card key={index} className="border-2 border-gold/20 shadow-divine">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="text-4xl">{bonus.icon}</div>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="font-semibold text-foreground text-lg">{bonus.title}</h3>
+                        <Badge variant="outline" className="text-spiritual-blue border-spiritual-blue">
+                          Valor: {bonus.value}
+                        </Badge>
                       </div>
-                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{bonus.description}</p>
+                      <p className="text-muted-foreground">{bonus.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -516,7 +495,7 @@ const SalesPage = () => {
           </p>
           
           <div className="space-y-4">
-            <Button variant="outline" size="xl" className="bg-white text-spiritual-blue hover:bg-white/90 animate-pulse" onClick={scrollToPricing}>
+            <Button variant="outline" size="xl" className="bg-white text-spiritual-blue hover:bg-white/90" onClick={scrollToPricing}>
               <Award className="mr-2" />
               Accede Ahora con Todos los Bonos por Solo $47
             </Button>
@@ -528,22 +507,16 @@ const SalesPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-8 sm:py-12">
-        <div className="container mx-auto px-3 sm:px-4 text-center">
+      <footer className="bg-foreground text-background py-12">
+        <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center items-center gap-2 mb-4">
-            <BookOpen className="h-5 w-5 sm:h-6 sm:w-6" />
-            <span className="text-lg sm:text-xl font-bold">Sermón Maker</span>
+            <BookOpen className="h-6 w-6" />
+            <span className="text-xl font-bold">Sermón Maker</span>
           </div>
-          <p className="text-background/70 mb-4 text-sm sm:text-base">
+          <p className="text-background/70 mb-4">
             Transformando la preparación de sermones con inteligencia artificial
           </p>
-          <div className="mb-6">
-            <Button variant="spiritual" size="lg" className="animate-pulse" onClick={scrollToPricing}>
-              <Gift className="mr-2" />
-              ¡Último Llamado! Accede Ahora por $47
-            </Button>
-          </div>
-          <p className="text-background/50 text-xs sm:text-sm">
+          <p className="text-background/50 text-sm">
             © 2024 Sermón Maker. Todos los derechos reservados.
           </p>
         </div>
