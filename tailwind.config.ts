@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Spiritual theme custom colors
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					light: 'hsl(var(--gold-light))'
+				},
+				'spiritual-blue': 'hsl(var(--spiritual-blue))',
+				'soft-blue': 'hsl(var(--soft-blue))',
+				'warm-white': 'hsl(var(--warm-white))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +75,16 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-spiritual': 'var(--gradient-spiritual)',
+				'gradient-peaceful': 'var(--gradient-peaceful)',
+				'gradient-divine': 'var(--gradient-divine)'
+			},
+			boxShadow: {
+				'divine': 'var(--shadow-divine)',
+				'peaceful': 'var(--shadow-peaceful)',
+				'soft': 'var(--shadow-soft)'
 			},
 			keyframes: {
 				'accordion-down': {

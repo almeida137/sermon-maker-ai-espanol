@@ -8,50 +8,64 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Spiritual Landing Page Colors */
+    --background: 220 15% 98%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Gold accent for spiritual theme */
+    --primary: 45 90% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft blue for secondary elements */
+    --secondary: 210 50% 92%;
+    --secondary-foreground: 220 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 30% 95%;
+    --muted-foreground: 220 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Light blue accent */
+    --accent: 200 50% 88%;
+    --accent-foreground: 220 15% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 88%;
+    --input: 210 20% 92%;
+    --ring: 45 90% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom spiritual theme tokens */
+    --gold: 45 90% 55%;
+    --gold-light: 45 85% 75%;
+    --spiritual-blue: 210 60% 45%;
+    --soft-blue: 200 50% 88%;
+    --warm-white: 45 25% 98%;
+    
+    /* Gradients */
+    --gradient-spiritual: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+    --gradient-peaceful: linear-gradient(180deg, hsl(var(--warm-white)) 0%, hsl(var(--soft-blue)) 100%);
+    --gradient-divine: linear-gradient(135deg, hsl(var(--spiritual-blue)) 0%, hsl(var(--accent)) 100%);
+    
+    /* Shadows */
+    --shadow-divine: 0 10px 40px -10px hsl(var(--gold) / 0.3);
+    --shadow-peaceful: 0 4px 20px -4px hsl(var(--spiritual-blue) / 0.2);
+    --shadow-soft: 0 2px 10px -2px hsl(var(--border) / 0.5);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
